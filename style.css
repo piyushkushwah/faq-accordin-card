@@ -1,0 +1,208 @@
+
+body{
+    margin: 0;
+    background: linear-gradient(to bottom,hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Kumbh Sans',sans-serif;
+}
+
+.center-flexbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-faq-card{
+    width: 62em;
+    height: 33em;
+    background: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    display: flex;
+    animation: scale 1s forwards;
+}
+
+@keyframes scale{
+    from{
+        opacity: 0.5;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.patterns{
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.patterns img:nth-child(1){
+    position: absolute;
+    top: -19em;
+    left: -33em;
+    width: 61em;
+    height: 60em;
+    object-fit: contain;
+    animation: opacity 4s forwards;
+}
+
+.patterns img:nth-child(2){
+    position: absolute;
+    top: 2em;
+    left: -5.8em;
+    width: 33.2rem;
+    height: auto;
+    animation: opacity 4s forwards;
+}
+
+.center-faq-card .box-image{
+    position: absolute;
+    top: 11.5em;
+    left: -9.3em;
+    width: 21.5%;
+    height: auto;
+    opacity: 0;
+    animation: box 1s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes opacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes box {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.faq{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    opacity: 0;
+    animation: opacity 1s forwards;
+    animation-delay: 1s;
+}
+
+.faq h1{
+    color: hsl(237, 12%, 33%);
+}
+
+.faq-content{
+    overflow: hidden;
+    overflow-y: auto;
+    min-height: fit-content;
+}
+
+.faq-content, .content{
+    width: 90%;
+}
+
+.content-head{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+}
+
+.content-head p{
+    color: hsl(238, 29%, 16%);
+    transition-duration: 1s;
+}
+
+.content-head img{
+    object-fit: contain;
+    transition-duration: 1s;
+}
+
+.first-content-body,
+.second-content-body,
+.three-content-body,
+.four-content-body,
+.five-content-body{
+    overflow: hidden;
+    height: 0;
+    transition-duration: 500ms;
+} 
+
+.first-content-body p,
+.second-content-body p,
+.three-content-body p,
+.four-content-body p,
+.five-content-body p{
+    margin-top: 0;
+    font-size: 0.8rem;
+    color: hsl(240, 6%, 50%);
+    font-weight: 400;
+    transition-duration: 1s;
+} 
+
+label{
+    color: hsl(240, 6%, 50%);
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition-duration: 1s;
+}
+
+label:hover p{
+    color: hsl(14, 88%, 65%);
+}
+
+label:hover ~ .box-image{
+    left: -10em;
+}
+
+#five:checked ~ .five-content-body,
+#first:checked ~ .first-content-body,
+#second:checked ~ .second-content-body,
+#three:checked ~ .three-content-body,
+#four:checked ~ .four-content-body
+{
+    height: 45px;
+}
+
+#first:checked ~ #first-label p,
+#second:checked ~ #second-label p,
+#three:checked ~ #three-label p,
+#four:checked ~ #four-label p,
+#five:checked ~ #five-label p
+{
+    font-weight: 700;
+}
+
+#first:checked ~ #first-label img,
+#second:checked ~ #second-label img,
+#three:checked ~ #three-label img,
+#four:checked ~ #four-label img,
+#five:checked ~ #five-label img
+{
+    transform: rotate(180deg);
+}
+
+.divider{
+    width: 100%;
+    height: 1.5px;
+    background-color: hsl(240, 5%, 91%);
+}
