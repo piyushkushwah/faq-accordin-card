@@ -36,7 +36,12 @@
 
     </div>
 
-    <img class="box-image" src="./images/illustration-box-desktop.svg" />
+    <div class="mobile-patterns">
+      <img src="./images/bg-pattern-mobile.svg" />
+      <img src="./images/illustration-woman-online-mobile.svg" />
+    </div>
+
+    <img id="box-image" class="box-image" src="./images/illustration-box-desktop.svg" />
 
     <div class="faq">
 
@@ -46,15 +51,16 @@
 
         <div class="content">
 
-          <input id="first" type="checkbox" hidden />
+          <input class="quest-check" hidden value="10" id="first" name="question" type="radio" />
 
           <label id="first-label" for="first" class="content-head">
             <p>How many team members can I invite?</p>
             <img src="./images/icon-arrow-down.svg" />
           </label>
 
-          <div id="first-content-body" class="first-content-body">
-            <p>You can invite up to 2 additional users on the Free plan. There is no limit on
+          <div id="first-content-body" class="hidden first-content-body ans">
+            <p>You can invite up to 2 additional users on
+              the Free plan. There is no limit on
               team members for the Premium plan.</p>
           </div>
 
@@ -64,15 +70,16 @@
 
         <div class="content">
 
-          <input id="second" type="checkbox" hidden />
+          <input class="quest-check" hidden value="20" id="second" name="question" type="radio" />
 
           <label id="second-label" for="second" class="content-head">
             <p>What is the maximum file upload size?</p>
             <img src="./images/icon-arrow-down.svg" />
           </label>
 
-          <div class="second-content-body">
-            <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          <div class="hidden second-content-body ans">
+            <p>No more than 2GB. All files in your account must fit your allotted
+              storage space.</p>
           </div>
 
           <div class="divider"></div>
@@ -81,14 +88,14 @@
 
         <div class="content">
 
-          <input id="three" type="checkbox" hidden />
+          <input id="three" class="quest-check" hidden value="30" type="radio" name="question" />
 
           <label id="three-label" for="three" class="content-head">
             <p>How do I reset my password?</p>
             <img src="./images/icon-arrow-down.svg" />
           </label>
 
-          <div class="three-content-body">
+          <div class="hidden three-content-body ans">
             <p>Click “Forgot password” from the login page or “Change password” from your profile page.A reset link will
               be emailed to you.</p>
           </div>
@@ -99,14 +106,14 @@
 
         <div class="content">
 
-          <input id="four" type="checkbox" hidden />
+          <input id="four" class="quest-check" hidden value="40" name="question" type="radio" />
 
           <label id="four-label" for="four" class="content-head">
             <p>Can I cancel my subscription?</p>
             <img src="./images/icon-arrow-down.svg" />
           </label>
 
-          <div class="four-content-body">
+          <div class="hidden four-content-body ans">
             <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
           </div>
 
@@ -116,14 +123,14 @@
 
         <div class="content">
 
-          <input id="five" type="checkbox" hidden />
+          <input id="five" class="quest-check" hidden value="40" name="question" type="radio" />
 
           <label id="five-label" for="five" class="content-head">
             <p>Do you provide additional support?</p>
             <img src="./images/icon-arrow-down.svg" />
           </label>
 
-          <div class="five-content-body">
+          <div class="five-content-body ans">
             <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
           </div>
 
